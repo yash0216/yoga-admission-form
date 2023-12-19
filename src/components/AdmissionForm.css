@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(83, 108, 129);
+}
+.AdmissionForm {
+  display: inline-block;
+}
+.submit {
+  background-color: rgb(37, 182, 57);
+}
