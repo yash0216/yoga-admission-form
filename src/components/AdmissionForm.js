@@ -21,13 +21,16 @@ const AdmissionForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/enroll", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://yoga-backend-n3le.onrender.com/api/enroll",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         toast.success("Enrolled successfully", {
