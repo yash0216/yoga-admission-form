@@ -1,9 +1,41 @@
-body {
-  background-color: rgb(83, 108, 129);
-}
 .AdmissionForm {
-  display: inline-block;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #c8e6c9; /* Greenish background color */
 }
-.submit {
-  background-color: rgb(37, 182, 57);
+
+.AdmissionForm label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.AdmissionForm input,
+.AdmissionForm select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.AdmissionForm button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.AdmissionForm button:hover {
+  background-color: #45a049;
+}
+
+.Toastify__toast-container {
+  z-index: 9999;
 }

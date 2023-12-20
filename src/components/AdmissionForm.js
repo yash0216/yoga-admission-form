@@ -4,12 +4,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AdmissionForm = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: "",
     email: "",
     age: 0,
     batch: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -31,15 +33,15 @@ const AdmissionForm = () => {
           body: JSON.stringify(formData),
         }
       );
-
       if (response.ok) {
         toast.success("Enrolled successfully", {
           position: toast.POSITION.TOP_CENTER,
         });
+        setFormData(initialFormData);
         // Additional logic if needed
       } else {
         toast.error(
-          "Failed to submit form to change the slot move to next month",
+          `error: Either check your age between 18 and 65 Or move to next month to change the batch`,
           {
             position: toast.POSITION.TOP_CENTER,
           }
